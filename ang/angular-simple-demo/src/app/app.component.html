@@ -1,0 +1,21 @@
+<header id="header">
+  <h1 id="logo">
+    <a routerLink="home"></a>
+  </h1>
+
+  <div id="menu">
+    <a routerLink="home" class="btn">Home</a>
+    <a routerLink="about" class="btn">About</a>
+    <a routerLink="experiments" class="btn">Experiments</a>
+  </div>
+
+  <div class="color"></div>
+  <div class="clear"></div>
+</header>
+
+<div class="shadow"></div>
+
+<div id="container">
+  <!-- 동적으로 컴포넌트를 바꾸고자 할때 사용하는 앵귤러 빌트인 태그이다.  -->
+  <router-outlet></router-outlet>
+</div>

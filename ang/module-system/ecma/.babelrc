@@ -1,0 +1,4 @@
+{
+  "only": [ "*.jsx", "*.es6"],
+  "presets": ["env"],
+}

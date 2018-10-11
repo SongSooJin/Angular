@@ -1,0 +1,44 @@
+<h2 class="w3-text-blue">Form Validation Driven Template</h2>
+<p>엘리먼트의 검증 상태 확인, 상태 키워드를 이용한 CSS 설정</p>
+<!-- 
+placeholder : 값이 없을때 나타나는 안내메세지 
+ -->
+<form class="submitted">
+  <!-- 
+<input _ngcontent-svg-3="" maxlength="10" name="id" pattern="3" 
+placeholder="input your id" required="" type="text" ng-reflect-maxlength="10"
+ng-reflect-pattern="3" ng-reflect-name="id" class="ng-untouched ng-pristine ng-invalid">
+ -->
+  <input type="text" placeholder="input your id" name="id"
+      [(ngModel)]="user.id" #id="ngModel"
+      pattern="[a-z][a-z0-9]{1,9}" pattern="3" maxlength="10" required>
+  <p *ngIf="id.touched && id.errors.required">필수 입력 항목 입니다.</p>
+</form>
+
+<hr />
+
+<p>id.untouched : <label class="ng-untouched">{{id.untouched}}</label></p>
+<p>id.touched : <label class="ng-touched">{{id.touched}}</label></p>
+<hr />
+<p>id.pristine : <label class="ng-pristine">{{id.pristine}}</label></p>
+<p>id.dirty : <label class="ng-dirty">{{id.dirty}}</label></p>
+<hr />
+<p class="submitted">id.valid : <label class="ng-valid">{{id.valid}}</label></p>
+<p class="submitted">id.invalid : <label class="ng-invalid">{{id.invalid}}</label></p>
+<hr />
+<div>id.value : {{id.value | json}}</div>
+<div>id.errors : <pre>{{id.errors | json}}</pre>
+</div>
+<!--  
+untouched : 사용자가 input박스를 건들이지 않았을때
+touched : 건드렸을때 
+
+pristine : 초기 데이터가 그대로일때 (쓰거나 지워도 안바뀜)
+dirty : 초기 데이터가 변경되거나
+
+valid : 사용자 input 조건 정보에 값이 맞으면 ture/false값 보냄
+invalid : valid 반대
+
+value : 해당값을 가지고있는지
+errors : 사용자 input 조건 정보에따라 즉시 에러정보를 띄워줌
+-->

@@ -1,0 +1,43 @@
+<select (change)="city=$event.target.value">
+ <!-- event.target.value : 사용자가 원하는 값을 가져옴 -->
+  <option *ngFor="let obj of cities" [value]="obj.eng"
+    [selected]="city==obj.eng?true:null">     
+    {{obj.han}}  
+  </option> 
+</select>
+
+<br/>
+
+<select [(ngModel)]="city"> <!--  양방향 바인딩 -->
+<option *ngFor="let c of cities; let i = index" [value]="c.eng">
+    {{i + ":"+ c.han}}
+</option> 
+</select>
+
+<br/><br/>
+
+<input [value]="city" (input)="city=$event.target.value">
+
+<br/>
+
+<input [(ngModel)]="city">
+
+<br/><br/>
+
+<span *ngFor="let obj of citie">
+  <input type="radio" [checked]="(obj.eng==city?true:null)" (click)="city=$event.target.value" 
+  [value]="obj.eng" name="city1">
+  {{obj.han}} 
+</span>
+
+<br/>
+
+<span *ngFor="let c of cities">
+     <input type="radio" [(ngModel)]="city" [value]="c.eng" name="city2">
+     {{c.han}}  
+</span>
+
+
+
+
+

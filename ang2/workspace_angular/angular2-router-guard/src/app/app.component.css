@@ -1,0 +1,9 @@
+
+:host h4 {
+    color: red;
+}
+
+.outlet {
+  padding: 20px;
+  border: 1px solid blue;
+}

@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": {
+    "stu": [{
+      "id": 1,
+      "name": "A",
+      "image": "img004.jpg"
+    }, {
+      "id": 2,
+      "name": "B",
+      "image": "img005.jpg"
+    }
+    ]
+  },
+  "msg": "success"
+}

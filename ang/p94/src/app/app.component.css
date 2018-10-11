@@ -1,0 +1,14 @@
+.container {
+  border: 2px solid black;
+  background-image: url(https://cdn.clien.net/web/api/file/F01/3026181/26c0c7097b4545faa89.JPG);
+  text-align: center;
+  padding: 10px;
+}
+
+.x {
+
+}
+
+.change {
+  border: 1px dotted red;
+}
